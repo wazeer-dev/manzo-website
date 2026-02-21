@@ -30,10 +30,10 @@ const Loader: React.FC<LoaderProps> = ({ onLoadingComplete }) => {
                     >
                         <div
                             className="glitch-loader w-[250px] md:w-[350px] h-16 md:h-24"
-                            style={{ '--logo-url': "url('/lgo blk@4x.webp')" } as React.CSSProperties}
+                            style={{ '--logo-url': "url('/logo-black.webp')" } as React.CSSProperties}
                         >
                             <Image
-                                src="/lgo blk@4x.webp"
+                                src="/logo-black.webp"
                                 alt="Manzo Logo"
                                 fill
                                 className="object-contain"
