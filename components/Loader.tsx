@@ -17,19 +17,19 @@ const Loader: React.FC<LoaderProps> = ({ onLoadingComplete }) => {
         >
             <div className="relative flex flex-col items-center">
                 {/* Logo Image Reveal */}
-                <div className="overflow-hidden relative h-16 md:h-24 w-[300px] md:w-[400px]">
+                <div className="overflow-hidden relative h-16 md:h-24 w-[280px] md:w-[400px]">
                     <motion.div
-                        initial={{ y: 200 }}
-                        animate={{ y: 0 }}
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{
-                            duration: 1.2,
+                            duration: 1,
                             ease: [0.76, 0, 0.24, 1],
                             delay: 0.2
                         }}
                         className="relative h-full w-full flex items-center justify-center"
                     >
                         <div
-                            className="glitch-loader w-[250px] md:w-[350px] h-16 md:h-24"
+                            className="glitch-loader w-full h-full"
                             style={{ '--logo-url': "url('/logo-black.webp')" } as React.CSSProperties}
                         >
                             <Image

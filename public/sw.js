@@ -2,7 +2,7 @@ const CACHE_NAME = 'manzo-v1';
 const ASSETS_TO_CACHE = [
     '/',
     '/manifest.json',
-    '/logo-white.webp'
+    '/logo-black.webp'
 ];
 
 self.addEventListener('install', (event) => {
