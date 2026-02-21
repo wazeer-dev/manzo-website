@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const WhatsAppButton = () => {
     // WhatsApp link - using a placeholder number based on the site's contact point
@@ -13,17 +14,28 @@ const WhatsAppButton = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className="fixed bottom-8 right-8 z-[100]"
+            className="fixed bottom-4 right-4 z-[100]"
         >
             <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center justify-center w-14 h-14 rounded-full glass-card transition-all hover:scale-110 active:scale-95 shadow-2xl overflow-visible"
+                className="group relative flex items-center justify-center w-14 h-14 transition-all hover:scale-110 active:scale-95 overflow-visible"
                 aria-label="Chat on WhatsApp"
             >
+                {/* Custom Glassy Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/419858326_11740799-removebg-preview.png"
+                        alt="WhatsApp Button Background"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+
                 {/* Visual Glow Effect */}
-                <div className="absolute inset-0 rounded-full bg-green-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 rounded-[1.5rem] bg-white/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Icon */}
                 <MessageCircle className="w-6 h-6 text-white group-hover:text-green-400 transition-colors relative z-10" />
