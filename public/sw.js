@@ -1,4 +1,4 @@
-const CACHE_NAME = 'manzo-v1';
+const CACHE_NAME = 'manzo-v2';
 const ASSETS_TO_CACHE = [
     '/',
     '/manifest.json',
