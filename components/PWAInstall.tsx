@@ -15,13 +15,33 @@ const PWAInstall = () => {
     const [isIos, setIsIos] = useState(false);
 
     useEffect(() => {
+        // Only show prompt on home page
+        if (!isHomePage) {
+            setShowPrompt(false);
+            return;
+        }
+
+        // Check if app is already in standalone mode
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            return;
+        }
+
+        // iOS detection
         const isIosDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
         setIsIos(isIosDevice);
+
+        // service worker registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(
+                (registration) => console.log('SW registered'),
+                (error) => console.log('SW registration failed', error)
+            );
+        }
 
         const handler = (e: any) => {
             e.preventDefault();
             setDeferredPrompt(e);
-            // Auto-show prompt after a 5 second delay ONLY if on home page
+            // Show prompt after a 5 second delay if on home page
             if (isHomePage) {
                 setTimeout(() => setShowPrompt(true), 5000);
             }
@@ -29,23 +49,15 @@ const PWAInstall = () => {
 
         const triggerHandler = () => {
             setShowPrompt(true);
+            handleInstall();
         };
 
-        // Listen for installation events globally
         window.addEventListener('beforeinstallprompt', handler);
         window.addEventListener('trigger-pwa-install', triggerHandler);
 
-        // For iOS, show it after some time ONLY if on home page
+        // For iOS, just show it after some time if on home page
         if (isIosDevice && isHomePage) {
             setTimeout(() => setShowPrompt(true), 5000);
-        }
-
-        // Register service worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').then(
-                () => console.log('SW registered'),
-                (err) => console.log('SW failed', err)
-            );
         }
 
         return () => {
