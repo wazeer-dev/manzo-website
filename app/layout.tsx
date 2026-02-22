@@ -43,6 +43,7 @@ export const metadata: Metadata = {
 
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PWAInstall from "@/components/PWAInstall";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 export default function RootLayout({
   children,
@@ -90,7 +91,9 @@ export default function RootLayout({
             })
           }}
         />
-        {children}
+        <SmoothScrolling>
+          {children}
+        </SmoothScrolling>
         <WhatsAppButton />
         <PWAInstall />
       </body>
