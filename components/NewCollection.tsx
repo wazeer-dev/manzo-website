@@ -22,9 +22,9 @@ const NewCollection = ({ titleTag: TitleTag = "h2" }: { titleTag?: "h1" | "h2" }
                             src="/men's fashion_old money style_mans style_ mans outfits.jpeg"
                             alt="Manzo Men's Winter Collection - High-quality wholesale mens fashion"
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-700" />
 
                         <div className="absolute top-8 left-8">
                             <h3 className="text-2xl font-serif text-black">Men&apos;s Winter Collection</h3>
@@ -49,9 +49,9 @@ const NewCollection = ({ titleTag: TitleTag = "h2" }: { titleTag?: "h1" | "h2" }
                             src="/Take an Official Look at AMBUSH x Levi's Denim___.jpeg"
                             alt="Manzo Men's Denim Collection - Premium wholesale male clothing"
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-700" />
 
                         <div className="absolute top-8 right-8 text-right">
                             <h3 className="text-2xl font-serif text-black mb-1">Men&apos;s Denim</h3>

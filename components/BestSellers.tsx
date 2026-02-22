@@ -18,14 +18,22 @@ const BestSellers = ({ titleTag: TitleTag = "h2" }: { titleTag?: "h1" | "h2" }) 
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1
+                staggerChildren: 0.12,
+                delayChildren: 0.2
             }
         }
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "circOut"
+            }
+        }
     };
 
     return (

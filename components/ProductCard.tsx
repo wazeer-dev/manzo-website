@@ -32,12 +32,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             transition={{ duration: 0.4, ease: "easeOut" }}
         >
             {/* Image Container */}
-            <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-[#f0f0f0] shadow-md group-hover:shadow-2xl transition-shadow duration-500">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-[#f0f0f0] shadow-sm group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-all duration-700 ease-out">
                 <Image
                     src={product.image}
                     alt={`${product.title} - Manzo ${product.category} wholesale mens wear collection`}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
 
                 {/* Hover Overlay with Button */}
