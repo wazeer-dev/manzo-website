@@ -1,12 +1,12 @@
 const sharp = require('sharp');
 const path = require('path');
 
-const logoPath = path.join(__dirname, 'public', 'logo-black.webp');
+const logoPath = path.join(__dirname, 'public', 'logo-white.webp');
 const out512 = path.join(__dirname, 'public', 'app-icon-512.png');
 const out192 = path.join(__dirname, 'public', 'app-icon-192.png');
 const outApple = path.join(__dirname, 'public', 'apple-icon.png');
 
-const BG_COLOR = '#3a3a3a';
+const BG_COLOR = '#111111';
 
 async function generate() {
     try {
