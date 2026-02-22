@@ -73,6 +73,14 @@ const Footer = ({ className = "bg-transparent" }: { className?: string }) => {
                                             Contact Us
                                         </Link>
                                     </li>
+                                    <li>
+                                        <button
+                                            onClick={() => window.dispatchEvent(new Event('trigger-pwa-install'))}
+                                            className="text-sm font-bold text-black/60 hover:text-black transition-colors text-left"
+                                        >
+                                            Install App
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

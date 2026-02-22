@@ -90,7 +90,7 @@ const PWAInstall = () => {
                     initial={{ opacity: 0, y: 50, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 30, scale: 0.95 }}
-                    className="fixed bottom-28 left-4 right-4 md:left-auto md:right-32 md:w-80 z-[110] p-5 glass-card rounded-3xl border border-white/30 shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
+                    className="fixed bottom-28 left-4 right-4 md:left-auto md:right-32 md:w-80 z-[110] p-5 bg-[#1c1c1c]/95 rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-2xl"
                 >
                     <button
                         onClick={() => setShowPrompt(false)}

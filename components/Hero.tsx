@@ -204,7 +204,7 @@ const Hero = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 0.8, ease: "easeOut" }}
-                                    className="mb-6"
+                                    className="mb-6 hidden md:block"
                                 >
                                     <p className="text-gray-400 font-medium text-[7px] md:text-[8px] leading-relaxed tracking-[0.2em] font-sans drop-shadow-lg opacity-80">
                                         {slides[currentSlide].description}
