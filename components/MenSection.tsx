@@ -14,7 +14,7 @@ const MenSection = () => {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover object-[center_15%] opacity-60"
             >
-                <source src="/0219.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/dau1xacoe/video/upload/v1771830580/0219_bwsgjg.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
